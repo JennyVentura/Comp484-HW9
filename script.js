@@ -1,40 +1,19 @@
 // Date Display Section
 var date = new Date(); // create date variable
-document.querySelector("#date p").textContent += date.toLocaleDateString(); // use querySelector to target id and specifically the paragraph inside that div, then add the date, toLocaleDateString() gives us specific timezone date and format
 
-
-/*const [month, day, year] = [
-  date.getMonth(),
-  date.getDate(),
+const [month, day, year] = [ // Extract the month, day, and year = made var for month day and year
+  String(date.getMonth() + 1).padStart(2, '0'), // + 1 to get correct month bc stored in array
+  String(date.getDate()).padStart(2, '0'), // .padStart(2, '0') makes it 2 digits, 2 for how many digits, pads with 0 if not 2 digits
   date.getFullYear(),
 ];
 
-document.querySelector("#date p").textContent += month + "/" day + "/" year;*/
+document.querySelector("#date p").textContent += `${month}/${day}/${year}`; // `${month}/${day}/${year}`is new way of month + "/" + day + "/" + year
 
 
 
 
 
-/*
-var date = new Date(); //const?
-document.body.innerHTML = "<p> Today is " + date.toLocalDateString() + "</p>";
 
-OR
 
-const now = date.toLocaleDateString();
-document.getElementById('date').textContent = `Today is ${now}`;
 
-OR
 
-const [month, day, year] = [
-  date.getMonth(),
-  date.getDate(),
-  date.getFullYear(),
-];
-document.getElementById('date').textContent = `Today is ${month}/${day}/${year}`;
-
-OR
-
-document.querySelector("#date").innerHTML = "<p> Today is " + date.toLocalDateString() + "</p>";
-document.getElementById("#date").innerHTML = "<p> Today is " + date.toLocalDateString() + "</p>";
-*/

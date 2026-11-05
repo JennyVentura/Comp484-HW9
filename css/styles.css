@@ -1,0 +1,14 @@
+h2 {
+    text-align: center;
+
+}
+
+
+
+
+.content-wrap {
+    max-width: 950px;
+    padding: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+}
