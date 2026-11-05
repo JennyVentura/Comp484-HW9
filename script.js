@@ -11,7 +11,28 @@ document.querySelector("#date p").textContent += `${month}/${day}/${year}`; // `
 
 
 
+// Number Conversion and Validation
 
+var convertToNumber1 = "500";
+
+var convertToNumber2 = "21";
+
+var stringOnly = "yay";
+
+var integer = "3.14"; //no string?
+
+
+document.querySelector("#convert p").textContent += `We have the variables ${convertToNumber1}, ${convertToNumber2}, ${stringOnly}, ${integer}.`;
+
+convertToNumber1.Number();
+
+
+/*
+document.querySelector("#f-convert").textContent += `${convertToNumber1}`;
+document.querySelector("#s-convert").textContent += `${convertToNumber2}`;
+document.querySelector("#string").textContent += `${stringOnly}`;
+document.querySelector("#decimal").textContent += `${integer}`;
+*/
 
 
 
