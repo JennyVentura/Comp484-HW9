@@ -1,20 +1,12 @@
-/*html {
+/* For Extra Credit */
+
+html {
     background-color: aqua;
 }
 
-.date {
 
-}
-    
-.convert {
-
-}
-
-.format {
-
-}
-*/
-
+/* Global Styles
+------------------------------------*/
 
 .content-wrap {
     max-width: 950px;
@@ -24,3 +16,29 @@
     line-height: 2.0;
     text-align: center;
 }
+
+
+/* Sections
+------------------------------------*/
+
+#date {
+    background: rgb(113, 27, 199);
+    color: white;
+}
+   
+#convert {
+    background: palegreen;
+    color: rgb(160, 12, 12);
+    text-align: justify;
+}
+
+#format {
+    background: pink;
+    color: blue;
+}
+
+#message {
+    background: yellow;
+    color: violet;
+}
+
