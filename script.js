@@ -43,7 +43,8 @@ document.querySelector(".not-lies").textContent += `Let's test the rest: ${conve
 
 var int = Number.isInteger(intNum);
 
-document.querySelector(".in").textContent += `Same with this, ${integer} should be an integer. Let's test that. Number.isInteger(3.14): ${Number.isInteger(intNum)}.`;
+document.querySelector(".in").textContent += `Same with this, ${integer} should be an integer. Let's test that. Number.isInteger(3.14): ${Number.isInteger(int)}.`;
+document.querySelector(".not-in").textContent += `As for the rest: ${convertToNumber1}: ${Number.isInteger(conNum1)}, ${convertToNumber2}: ${Number.isInteger(conNum2)}, ${stringOnly}: ${Number.isInteger(stNum)}`; // could also do method inside
 
 
 
