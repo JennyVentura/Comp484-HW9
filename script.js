@@ -13,28 +13,37 @@ document.querySelector("#date p").textContent += `${month}/${day}/${year}`; // `
 
 // Number Conversion and Validation
 
-var convertToNumber1 = "500";
+var convertToNumber1 = "500"; // declare var and put String type in
 
 var convertToNumber2 = "21";
 
 var stringOnly = "yay";
 
-var integer = "3.14"; //no string?
+var integer = "3.14"; // put it in string cause example had "" around it
 
 
-document.querySelector("#convert p").textContent += `We have the variables ${convertToNumber1}, ${convertToNumber2}, ${stringOnly}, ${integer}.`;
-
-convertToNumber1.Number();
+document.querySelector(".og-numbers").textContent += `We have the variables ${convertToNumber1}, ${convertToNumber2}, ${stringOnly}, ${integer}. Which are all Strings right now.`;
 
 
-/*
-document.querySelector("#f-convert").textContent += `${convertToNumber1}`;
-document.querySelector("#s-convert").textContent += `${convertToNumber2}`;
-document.querySelector("#string").textContent += `${stringOnly}`;
-document.querySelector("#decimal").textContent += `${integer}`;
-*/
+var conNum1 = Number(convertToNumber1); // using Number() to convert type - here String to number
+var conNum2 = Number(convertToNumber2);
+var stNum = Number(stringOnly);
+var intNum = Number(integer);
 
 
+document.querySelector(".converted-numbers").textContent += `Now, I have converted each. Now, ${convertToNumber1} has become a ${typeof conNum1}, ${convertToNumber2} has become a ${typeof conNum2}, ${stringOnly} has become a ${typeof stNum}, and ${integer} has become a ${typeof intNum}.`; // used typeof to see data type
+
+
+var truth = Number.isNaN(stNum);
+
+document.querySelector(".lies").textContent += `But wait! ${stringOnly} shouldn't be a number. Let's test that. If the following comes back as 'true' then it's actually NaN = not a number. Number.isNaN(yay): ${truth}. Yay! yay is not a number!`;
+document.querySelector(".not-lies").textContent += `Let's test the rest: ${convertToNumber1}: ${Number.isNaN(conNum1)}, ${convertToNumber2}: ${Number.isNaN(conNum2)}, ${integer}: ${Number.isNaN(intNum)}`; // could also do method inside
+
+
+
+var int = Number.isInteger(intNum);
+
+document.querySelector(".in").textContent += `Same with this, ${integer} should be an integer. Let's test that. Number.isInteger(3.14): ${Number.isInteger(intNum)}.`;
 
 
 
