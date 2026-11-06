@@ -1,11 +1,19 @@
-h2 {
-    text-align: center;
+/*html {
+    background-color: aqua;
+}
+
+.date {
+
+}
+    
+.convert {
 
 }
 
-p {
-    text-align: center;
+.format {
+
 }
+*/
 
 
 .content-wrap {
@@ -14,4 +22,5 @@ p {
     margin: 0 auto;
     overflow: hidden;
     line-height: 2.0;
+    text-align: center;
 }

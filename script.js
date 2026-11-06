@@ -46,5 +46,7 @@ var int = Number.isInteger(intNum);
 document.querySelector(".in").textContent += `Same with this, ${integer} should be an integer. Let's test that. Number.isInteger(3.14): ${int}.`;
 document.querySelector(".not-in").textContent += `As for the rest: ${convertToNumber1}: ${Number.isInteger(conNum1)}, ${convertToNumber2}: ${Number.isInteger(conNum2)}, ${stringOnly}: ${Number.isInteger(stNum)}`; // could also do method inside
 
+//document.querySelector(".overall").textContent += `So overall: Original value: `;
 
 
+// Number Formatting and Math Results
