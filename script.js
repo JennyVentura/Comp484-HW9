@@ -55,4 +55,47 @@ document.querySelector(".overall4").textContent += `Overall: Original value: ${d
 
 // Number Formatting and Math Results
 
+const shirtCost = 7.99;
+
+const shipping = 4;
+
+const tax = shirtCost * .1; // tax is 10% = .1
+
+const subtotal = shirtCost; // subtotals usually don't include the shipping, so I just made it = to the shirtCost
+
+const total = subtotal + shipping + tax;
+
+
+const subCurrForm = new Intl.NumberFormat("en-US", { // looked around mdn for a number formatter and I'm assuming this is ok for "at least one formatted numeric result"
+  style: "currency", 
+  currency: "USD" 
+}).format(subtotal);
+
+const shipCurrForm = new Intl.NumberFormat("en-US", { // formats the numbers, in this case as currency and specifically USD
+  style: "currency", 
+  currency: "USD" 
+}).format(shipping);
+
+const taxCurrForm = new Intl.NumberFormat("en-US", { 
+  style: "currency", 
+  currency: "USD" 
+}).format(tax);
+
+const totCurrForm = new Intl.NumberFormat("en-US", { 
+  style: "currency", 
+  currency: "USD" 
+}).format(total);
+
+
+document.querySelector(".subtotal").textContent += `${subCurrForm}`;
+document.querySelector(".shipping").textContent += `${shipCurrForm}`;
+document.querySelector(".tax").textContent += `${taxCurrForm}`;
+document.querySelector(".total").textContent += `${totCurrForm}`;
+
+document.querySelector(".summary").textContent += `${total.toFixed(2)}`;
+
+
+
+// Conditional Messages
+
 
