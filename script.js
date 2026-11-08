@@ -39,11 +39,10 @@ var truth = Number.isNaN(stNum); // made a boolean
 
 document.querySelector(".lies1").textContent += `But wait! ${stringOnly} shouldn't be a number. Let's test that. If the following comes back as 'true' then it's actually NaN = not a number.`;
 
-if(Number.isNaN(stNum) == true) {
+if(Number.isNaN(stNum) == true) { // if/else statement, if true, it will display mesage that it's not a number, if false then it must be a number -- part of Conditional Message
   document.querySelector(".lies2").textContent += `Number.isNaN(yay): ${truth}. Yay! yay is not a number!`;
 } else {
   document.querySelector(".lies2").textContent += `Number.isNaN(yay): ${truth}. Oh, it was a valid number`;
-
 }
 
 document.querySelector(".not-lies").textContent += `Let's test the rest: ${convertToNumber1}: ${Number.isNaN(conNum1)}, ${convertToNumber2}: ${Number.isNaN(conNum2)}, ${decimal}: ${Number.isNaN(decNum)}`; // could also do method inside
@@ -53,11 +52,10 @@ var dec = Number.isInteger(decNum);
 
 document.querySelector(".not-int1").textContent += `What about integers? Specifically, is ${decimal} an integer? Let's test that.`;
 
-if(Number.isInteger(decNum) == true) {
+if(Number.isInteger(decNum) == true) { // if/else statement, if succeeds then 3.14 is an integer, if fails then it isn't -- part of Conditional Message
   document.querySelector(".not-int2").textContent += `Number.isInteger(3.14): ${dec}. Oh, it is an integer.`;
 } else {
   document.querySelector(".not-int2").textContent += `Number.isInteger(3.14): ${dec}. It's actually a decimal.`;
-
 }
 
 document.querySelector(".int-check").textContent += `As for the rest: ${convertToNumber1}: ${Number.isInteger(conNum1)}, ${convertToNumber2}: ${Number.isInteger(conNum2)}, ${stringOnly}: ${Number.isInteger(stNum)}`;
@@ -67,6 +65,11 @@ document.querySelector(".overall1").textContent += `Overall: Original value: ${c
 document.querySelector(".overall2").textContent += `Overall: Original value: ${convertToNumber2} -> Converted: ${conNum2} -> isNaN: ${Number.isNaN(conNum2)} -> isInteger: ${Number.isInteger(conNum2)}`;
 document.querySelector(".overall3").textContent += `Overall: Original value: ${stringOnly} -> Converted: ${stNum} -> isNaN: ${truth} -> isInteger: ${Number.isInteger(stNum)}`;
 document.querySelector(".overall4").textContent += `Overall: Original value: ${decimal} -> Converted: ${decNum} -> isNaN: ${Number.isNaN(decNum)} -> isInteger: ${dec}`;
+
+/*document.querySelector(".overall1").textContent += `Overall: Original value: ${convertToNumber1} -> Converted: ${conNum1} -> isNaN: ${Number.isNaN(conNum1)} -> isInteger: ${Number.isInteger(conNum1)} ` + 
+`Overall: Original value: ${convertToNumber2} -> Converted: ${conNum2} -> isNaN: ${Number.isNaN(conNum2)} -> isInteger: ${Number.isInteger(conNum2)} ` + 
+`Overall: Original value: ${stringOnly} -> Converted: ${stNum} -> isNaN: ${truth} -> isInteger: ${Number.isInteger(stNum)} ` + 
+`Overall: Original value: ${decimal} -> Converted: ${decNum} -> isNaN: ${Number.isNaN(decNum)} -> isInteger: ${dec}`;*/ // is this what you meant by "Combine all your results into ONE string, (you can use + to join multiple strings)"? I don't like how it looks, so I left the above
 
 
 
@@ -109,4 +112,4 @@ document.querySelector(".shipping").textContent += `${shipCurrForm}`;
 document.querySelector(".tax").textContent += `${taxCurrForm}`;
 document.querySelector(".total").textContent += `${totCurrForm}`;
 
-document.querySelector(".summary").textContent += `${total.toFixed(2)}`;
+document.querySelector(".summary").textContent += `${total.toFixed(2)}`; //toFixed(2) keeps it at 2 decimal places - which is good, cause that's what total has
