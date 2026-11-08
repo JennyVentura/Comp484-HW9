@@ -42,7 +42,7 @@ document.querySelector(".lies1").textContent += `But wait! ${stringOnly} shouldn
 if(Number.isNaN(stNum) == true) { // if/else statement, if true, it will display mesage that it's not a number, if false then it must be a number -- part of Conditional Message
   document.querySelector(".lies2").textContent += `Number.isNaN(yay): ${truth}. Yay! yay is not a number!`;
 } else {
-  document.querySelector(".lies2").textContent += `Number.isNaN(yay): ${truth}. Oh, it was a valid number`;
+  document.querySelector(".lies2").textContent += `Number.isNaN(yay): ${truth}. Oh, it was a valid number.`;
 }
 
 document.querySelector(".not-lies").textContent += `Let's test the rest: ${convertToNumber1}: ${Number.isNaN(conNum1)}, ${convertToNumber2}: ${Number.isNaN(conNum2)}, ${decimal}: ${Number.isNaN(decNum)}`; // could also do method inside
@@ -112,4 +112,4 @@ document.querySelector(".shipping").textContent += `${shipCurrForm}`;
 document.querySelector(".tax").textContent += `${taxCurrForm}`;
 document.querySelector(".total").textContent += `${totCurrForm}`;
 
-document.querySelector(".summary").textContent += `${total.toFixed(2)}`; //toFixed(2) keeps it at 2 decimal places - which is good, cause that's what total has
+document.querySelector(".summary").textContent += `${total.toFixed(2)}`; // toFixed(2) keeps it at 2 decimal places - which is good, cause that's what total has

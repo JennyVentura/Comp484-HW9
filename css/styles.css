@@ -11,7 +11,7 @@ html {
 .content-wrap {
     max-width: 950px;
     padding: 50px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     overflow: hidden;
     line-height: 2.0;
     text-align: center;
@@ -28,21 +28,20 @@ p {
 #date {
     background: rgb(113, 27, 199);
     color: white;
+    width: 500px;
+    margin: 0 auto;
 }
    
 #convert {
     background: palegreen;
     color: rgb(160, 12, 12);
-    text-align: justify;
+    width: 1200px;
+    margin: 0 auto;
 }
 
 #format {
     background: pink;
     color: blue;
+    width: 1100px;
+    margin: 0 auto;
 }
-
-#message {
-    background: yellow;
-    color: violet;
-}
-
