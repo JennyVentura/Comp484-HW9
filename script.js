@@ -37,14 +37,31 @@ document.querySelector(".converted-numbers").textContent += `Now, I have convert
 
 var truth = Number.isNaN(stNum); // made a boolean
 
-document.querySelector(".lies").textContent += `But wait! ${stringOnly} shouldn't be a number. Let's test that. If the following comes back as 'true' then it's actually NaN = not a number. Number.isNaN(yay): ${truth}. Yay! yay is not a number!`;
+document.querySelector(".lies1").textContent += `But wait! ${stringOnly} shouldn't be a number. Let's test that. If the following comes back as 'true' then it's actually NaN = not a number.`;
+
+if(Number.isNaN(stNum) == true) {
+  document.querySelector(".lies2").textContent += `Number.isNaN(yay): ${truth}. Yay! yay is not a number!`;
+} else {
+  document.querySelector(".lies2").textContent += `Number.isNaN(yay): ${truth}. Oh, it was a valid number`;
+
+}
+
 document.querySelector(".not-lies").textContent += `Let's test the rest: ${convertToNumber1}: ${Number.isNaN(conNum1)}, ${convertToNumber2}: ${Number.isNaN(conNum2)}, ${decimal}: ${Number.isNaN(decNum)}`; // could also do method inside
 
 
 var dec = Number.isInteger(decNum);
 
-document.querySelector(".not-int").textContent += `Same with this, ${decimal} should be an integer. Let's test that. Number.isInteger(3.14): ${dec}.`;
+document.querySelector(".not-int1").textContent += `What about integers? Specifically, is ${decimal} an integer? Let's test that.`;
+
+if(Number.isInteger(decNum) == true) {
+  document.querySelector(".not-int2").textContent += `Number.isInteger(3.14): ${dec}. Oh, it is an integer.`;
+} else {
+  document.querySelector(".not-int2").textContent += `Number.isInteger(3.14): ${dec}. It's actually a decimal.`;
+
+}
+
 document.querySelector(".int-check").textContent += `As for the rest: ${convertToNumber1}: ${Number.isInteger(conNum1)}, ${convertToNumber2}: ${Number.isInteger(conNum2)}, ${stringOnly}: ${Number.isInteger(stNum)}`;
+
 
 document.querySelector(".overall1").textContent += `Overall: Original value: ${convertToNumber1} -> Converted: ${conNum1} -> isNaN: ${Number.isNaN(conNum1)} -> isInteger: ${Number.isInteger(conNum1)}`;
 document.querySelector(".overall2").textContent += `Overall: Original value: ${convertToNumber2} -> Converted: ${conNum2} -> isNaN: ${Number.isNaN(conNum2)} -> isInteger: ${Number.isInteger(conNum2)}`;
@@ -93,9 +110,3 @@ document.querySelector(".tax").textContent += `${taxCurrForm}`;
 document.querySelector(".total").textContent += `${totCurrForm}`;
 
 document.querySelector(".summary").textContent += `${total.toFixed(2)}`;
-
-
-
-// Conditional Messages
-
-
